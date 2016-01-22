@@ -1,7 +1,7 @@
 (function() 
 	{
 		angular.module('arrowApp',
-		['ui.router','autocomplete']).config(config);
+		['ui.router','ui.bootstrap']).config(config);
 
 		config.$inject = ['$stateProvider','$urlRouterProvider'];
 		

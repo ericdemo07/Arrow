@@ -2,7 +2,7 @@
 	<div class="row ">
 		<div class="col-md-4 col-lg-4">Type</div>
 		<div class="col-md-4 col-lg-4">
-			<select ng-model="item.value" ng-change="onChanged()" ng-options="productType for productType in productTypes">
+			<select ng-model="vm.productType.value" ng-change="getBrandNames()" ng-options="productType for productType in productTypes">
       		</select>
 		</div>
 		<div class="col-md-4 col-lg-4"></div>
@@ -10,7 +10,7 @@
 	<div class="row">
 		<div class="col-md-4 col-lg-4">Brand</div>
 		<div class="col-md-4 col-lg-4">
-			<autocomplete placeholder="type to search movies..." click-activation="true" data="movies" on-type="doSomething"></autocomplete>
+    		<input type="text" ng-model="selected" uib-typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control">
     	</div>
 		<div class="col-md-4 col-lg-4"></div>
 	</div>

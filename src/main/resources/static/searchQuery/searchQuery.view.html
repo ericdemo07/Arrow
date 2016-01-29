@@ -1,5 +1,5 @@
 <div class="container">
-	<div class="row ">
+	<div class="row">
 		<div class="col-md-4 col-lg-4">Type</div>
 		<div class="col-md-4 col-lg-4">
 			<select ng-model="vm.productType.value" ng-change="getBrandNames()" ng-options="productType for productType in productTypes">
@@ -10,8 +10,16 @@
 	<div class="row">
 		<div class="col-md-4 col-lg-4">Brand</div>
 		<div class="col-md-4 col-lg-4">
-    		<input type="text" ng-model="selected" uib-typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control">
+    		<input type="text" ng-model="selected" uib-typeahead="state for state in states | filter:$viewValue | limitTo:8">
     	</div>
+		<div class="col-md-4 col-lg-4"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-4 col-lg-4">Model</div>
+		<div class="col-md-4 col-lg-4">
+			<select ng-model="vm.productType.value" ng-change="getModelNames()" ng-options="productModel for productModel in productModels">
+      		</select>
+		</div>
 		<div class="col-md-4 col-lg-4"></div>
 	</div>
 </div>

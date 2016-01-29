@@ -17,13 +17,14 @@ public class SearchQueryController
 	{
 		System.out.println("[I am in SearchQueryController]");
 		List<String> brandName = new ArrayList<String>();
-		
-		if(query.equalsIgnoreCase("Headphones"))
+
+		if(query.trim().equalsIgnoreCase("Headphones"))
 		{
 			brandName.add("JBL");
 			brandName.add("Philips");
 			brandName.add("Boat");
 		}
+		System.out.println("BrandName : "+brandName);
 		return brandName.toArray();
 	}
 }

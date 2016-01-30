@@ -16,17 +16,18 @@
 					 $scope.states = response;
 				 });
 			 }
+		
 			 $scope.getModelNames = function() 
 			 {
-				 var productTypeSelected = this.vm.productType.value;
-				 
-				 QueryService.BrandNameSearchQuery(productTypeSelected).then(function(response) 
+				 var brandNameSelected = this.vm.brandName.value;
+				 console.log("brandNameSelected :["+brandNameSelected);
+
+				 QueryService.BrandModelSearchQuery(brandNameSelected).then(function(response) 
 				 {
-					 $scope.selected = undefined;
-					 $scope.states = response;
-					 console.log("Query Service is up and running!"+response);
+					 $scope.brandModels = response;
+					 console.log("BrandModelSearchQuery Service is up and running! "+response);
 				 });
 			 }
-		}
+		}	
 	}
 )();

@@ -1,0 +1,59 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 col-lg-4">Product Description</div>
+		<div class="col-md-8 col-lg-8">
+			<textarea rows="4" cols="50"></textarea>
+		</div>	
+	</div>
+	<div class="row">
+		<div class="col-md-4 col-lg-4">Upload Photos</div>
+		<div class="col-md-2 col-lg-2">
+			<div class="image-upload">
+			    <label for="file-input1">
+        			<img src="http://goo.gl/pB9rpQ"/>
+    			</label>
+				<input id="file-input1" type="file" ngf-select ng-model="productImage1" accept="image/*" 
+					ngf-max-size="2MB" required ngf-model-invalid="errorFiles">
+				<br>
+				<img ngf-src="productImage1" class="thumb">
+			</div>	
+		</div>
+		<div class="col-md-2 col-lg-2">
+			<div class="image-upload">
+			    <label for="file-input2">
+        			<img src="http://goo.gl/pB9rpQ"/>
+    			</label>
+				<input id="file-input2" type="file" ngf-select ng-model="productImage2" accept="image/*" 
+					ngf-max-size="2MB" required ngf-model-invalid="errorFiles">
+				<br>
+				<img ngf-src="productImage2" class="thumb">
+			</div>	
+		</div>
+		<div class="col-md-2 col-lg-2">
+			<div class="image-upload">
+			    <label for="file-input3">
+        			<img src="http://goo.gl/pB9rpQ"/>
+    			</label>
+				<input id="file-input3" type="file"  ngf-select ng-model="productImage3" accept="image/*" 
+					ngf-max-size="2MB" required ngf-model-invalid="errorFiles">
+				<br>
+				<img ngf-src="productImage3" class="thumb">
+			</div>	
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4 col-lg-4">Product Invoice</div>
+		<div class="col-md-4 col-lg-4">
+			<div class="image-upload">
+				<label for="file-input4">
+	        		<span>
+	        		Upload Product Invoice</span>
+	    		</label>
+				<input id="file-input4" type="file"  ngf-select ng-model="invoiceImage3" accept="image/*" 
+					ngf-max-size="2MB" required ngf-model-invalid="errorFiles">
+				/ <a href = "#">InputDetails</a>		
+			</div>	
+		</div>
+		<div class="col-md-4 col-lg-4"></div>
+	</div>
+</div>

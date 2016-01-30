@@ -1,7 +1,7 @@
 (function() 
 	{
 		angular.module('arrowApp',
-		['ui.router','ui.bootstrap']).config(config);
+		['ui.router','ui.bootstrap','ngFileUpload']).config(config);
 
 		config.$inject = ['$stateProvider','$urlRouterProvider'];
 		
@@ -13,6 +13,14 @@
 				url : '/searchquery',
 				controller : 'SearchQueryController',
 				templateUrl : 'searchQuery/searchQuery.view.html',
+				controllerAs : 'vm'
+			});
+			$stateProvider
+			.state('productDetail', 
+			{
+				url : '/productdetail',
+				controller : 'ProductDetailController',
+				templateUrl : 'productDetail/productDetail.view.html',
 				controllerAs : 'vm'
 			});
 		}

@@ -7,6 +7,8 @@
 		{
 			var service = {};
 			service.BrandNameSearchQuery = BrandNameSearchQuery;
+			service.BrandModelSearchQuery = BrandModelSearchQuery;
+
 			return service;
 			function BrandNameSearchQuery(query) 
 			{
@@ -16,6 +18,17 @@
 					method : "post",
 					url : "/arrow/searchquery",
 					data : query
+				});
+				return request.then(handleSuccess, handleError('Faliure'));
+			}
+			function BrandModelSearchQuery(brandName) 
+			{
+				console.log ("BrandName : ["+brandName);
+				var request = $http(
+				{
+					method : "post",
+					url : "/arrow/searchmodel",
+					data : brandName
 				});
 				return request.then(handleSuccess, handleError('Faliure'));
 			}

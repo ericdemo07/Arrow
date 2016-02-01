@@ -1,0 +1,413 @@
+/* app css stylesheet */
+.logoImg {
+	margin-bottom: 8px;
+	padding: 4px;
+	float: left;
+	height: 60px;
+}
+
+.no-gutter>[class*=col-] {
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.signInTitle {
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+	pointer-events: none;
+	border-top: 3px solid #bf0000 !important;
+	text-align: center;
+	background-color: #181818;
+	font-size: 15px !important;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 100%;
+}
+
+.arrow-down {
+	margin-left: auto;
+	margin-right: auto;
+	width: 0;
+	height: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 27px solid #181818;
+	margin-top: -20px;
+	margin-bottom: 20px;
+}
+
+.form {
+	margin: 0 auto;
+	max-width: 400px;
+}
+
+.form .icon {
+	position: absolute;
+	margin: 12px 0 0 52px;
+	color: #aaa;
+	text-align: center;
+	font-size: 15px;
+}
+
+.formEmail {
+	display: block;
+	margin: 0 auto;
+	width: 80%;
+	height: 40px;
+	padding: 0 10px 0 36px;
+	border: 1px solid #c9c9c9;
+	border-bottom: 0.5px; background-color : #ffffff;
+	-webkit-border-radius: 1px 1px 3px 3px;
+	border-radius: 1px 1px 3px 3px;
+	background-color: #ffffff;
+}
+
+.formPassword {
+	display: block;
+	margin: 0 auto;
+	width: 80%;
+	height: 40px;
+	padding: 0 10px 0 36px;
+	border: 1px solid #c9c9c9;
+	background-color : #ffffff;
+	-webkit-border-radius: 0 0 3px 3px;
+	border-radius: 0 0 3px 3px;
+	background-color: #ffffff;
+}
+
+.forgot {
+	display: inline-block;
+	padding: 12px;
+	margin-right: 30px;
+	color: #790000;
+	float: right;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.forgot:hover {
+	text-decoration: none;
+	color: #790000;
+	font-size: 14px;
+}
+
+.forgot:active {
+	text-decoration: none;
+	color: #790000;
+	font-size: 14px;
+}
+
+.signInButton {
+	z-index: 999;
+	background: #bf0000;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #e00700),
+		color-stop(100%, #bf0000));
+	background: -webkit-linear-gradient(top, #e00700 0, #bf0000 100%);
+	background: linear-gradient(to bottom, #e00700 0, #bf0000 100%);
+	border: 1px solid #9e0000;
+	width: 95%;
+	margin: 8px auto;
+	display: block;
+	max-width: 480px;
+	-webkit-border-top-left-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	-moz-border-radius-topright: 3px;
+	border-top-right-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-bottomright: 3px;
+	border-bottom-right-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-moz-border-radius-bottomleft: 3px;
+}
+
+.text {
+	color: #fff;
+	font-size: 16px;
+	float: none;
+	padding-top: 10px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.signInButton .arrow {
+	border-left: 1px solid #e01717;
+	-webkit-box-shadow: 1px 0 1px rgba(155, 10, 10, 0.5) inset;
+	box-shadow: 1px 0 1px rgba(155, 10, 10, 0.5) inset
+}
+
+.arrow {
+	color: #fff;
+	font-size: 140%;
+	height: 100%;
+	padding-top: 8px;
+	width: 40px;
+	padding-left: 8px;
+	float: right;
+}
+
+.lineWrapper {
+	margin: 20px 8px 15px 8px;
+	text-align: center;
+}
+
+.lineWrapper small {
+	display: block;
+	margin: -26px auto 0 auto;
+	margin-top: -30px;
+	width: 15%;
+	background-color: #FFF;
+	font-size: 16px
+}
+
+.line {
+	margin: 0 auto;
+	width: 100%;
+	border-top: 1px solid #d0d0d0
+}
+
+.registerButton {
+	background: #464646;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #888),
+		color-stop(100%, #464646));
+	background: -webkit-linear-gradient(top, #888 0, #464646 100%);
+	background: linear-gradient(to bottom, #888 0, #464646 100%);
+	border: 1px solid #777;
+	width: 95%;
+	margin: 8px auto;
+	display: block;
+	max-width: 480px;
+	-webkit-border-top-left-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	-moz-border-radius-topright: 3px;
+	border-top-right-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-bottomright: 3px;
+	border-bottom-right-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-moz-border-radius-bottomleft: 3px;
+}
+
+.registerButton .arrow {
+	border-left: 1px solid #555;
+	-webkit-box-shadow: 1px 0 1px rgba(141, 141, 141, 0.5) inset;
+	box-shadow: 1px 0 1px rgba(141, 141, 141, 0.5) inset;
+}
+
+.termsSection {
+	display: inline-block;
+	padding: 8px 0 0 45px;
+	float: left;
+	margin-bottom: 25px;
+}
+
+.signInWarning {
+	max-width: 400px;
+	display: block;
+	margin: 0 auto;
+	width: 80%;
+	text-align: left;
+	font-size: 13px;
+	padding-left: 37px;
+	padding-bottom: 10px;
+}
+
+@media all and (min-device-width:1500px) {
+	.logoImg {
+		margin-bottom: 16px;
+		padding: 8px;
+		float: left;
+		height: 120px;
+	}
+	.signInTitle {
+		font-family: 'Open Sans', sans-serif;
+		color: white;
+		pointer-events: none;
+		border-top: 6px solid #bf0000 !important;
+		text-align: center;
+		background-color: #181818;
+		font-size: 30px !important;
+		font-weight: bold;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		width: 100%;
+	}
+	.arrow-down {
+		margin-left: auto;
+		margin-right: auto;
+		width: 0;
+		height: 0;
+		border-left: 40px solid transparent;
+		border-right: 40px solid transparent;
+		border-top: 54px solid #181818;
+		margin-top: -40px;
+		margin-bottom: 40px;
+	}
+	.form {
+		margin: 0 auto;
+		max-width: 800px;
+	}
+	.form .icon {
+		position: absolute;
+		margin: 24px 0 0 104px;
+		color: #aaa;
+		text-align: center;
+		font-size: 30px;
+	}
+	.formEmail {
+		display: block;
+		margin: 0 auto;
+		width: 80%;
+		height: 80px;
+		padding: 0 20px 0 72px;
+		border: 2px solid #c9c9c9;
+		background-color: #ffffff;
+		border-bottom: 0;
+		-webkit-border-radius: 2px 2px 6px 6px;
+		border-radius: 2px 2px 6px 6px;
+	}
+	.formPassword {
+		display: block;
+		margin: 0 auto;
+		width: 80%;
+		height: 80px;
+		padding: 0 20px 0 72px;
+		border: 2px solid #c9c9c9;
+		background-color: #ffffff;
+		-webkit-border-radius: 0 0 6px 6px;
+		border-radius: 0 0 6px 6px;
+	}
+	.forgot {
+		display: inline-block;
+		padding: 24px;
+		margin-right: 60px;
+		color: #790000;
+		float: right;
+		text-decoration: none;
+		font-size: 28px;
+	}
+	.forgot:hover {
+		text-decoration: none;
+		color: #790000;
+		font-size: 14px;
+	}
+	.forgot:active {
+		text-decoration: none;
+		color: #790000;
+		font-size: 14px;
+	}
+	.signInButton {
+		z-index: 999;
+		background: #bf0000;
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #e00700),
+			color-stop(100%, #bf0000));
+		background: -webkit-linear-gradient(top, #e00700 0, #bf0000 100%);
+		background: linear-gradient(to bottom, #e00700 0, #bf0000 100%);
+		border: 2px solid #9e0000;
+		width: 95%;
+		margin: 16px auto;
+		display: block;
+		max-width: 960px;
+		-webkit-border-top-left-radius: 6px;
+		-moz-border-radius-topleft: 6px;
+		border-top-left-radius: 6px;
+		-webkit-border-top-right-radius: 6px;
+		-moz-border-radius-topright: 6px;
+		border-top-right-radius: 6px;
+		-webkit-border-bottom-right-radius: 6px;
+		-moz-border-radius-bottomright: 6px;
+		border-bottom-right-radius: 6px;
+		-webkit-border-bottom-left-radius: 6px;
+		-moz-border-radius-bottomleft: 6px;
+	}
+	.text {
+		color: #fff;
+		font-size: 16px;
+		float: none;
+		padding-top: 10px;
+		vertical-align: middle;
+		display: inline-block
+	}
+	.signInButton .arrow {
+		border-left: 1px solid #e01717;
+		-webkit-box-shadow: 1px 0 1px rgba(155, 10, 10, 0.5) inset;
+		box-shadow: 1px 0 1px rgba(155, 10, 10, 0.5) inset
+	}
+	.arrow {
+		color: #fff;
+		font-family: 'rakMobile';
+		font-size: 140%;
+		height: 100%;
+		padding-top: 8px;
+		width: 40px;
+		padding-left: 8px;
+		float: right;
+	}
+	.lineWrapper {
+		margin: 20px 8px 15px 8px;
+		text-align: center;
+	}
+	.lineWrapper small {
+		display: block;
+		margin: -26px auto 0 auto;
+		margin-top: -30px;
+		width: 15%;
+		background-color: #FFF;
+		font-size: 16px
+	}
+	.line {
+		margin: 0 auto;
+		width: 100%;
+		border-top: 2px solid #d0d0d0
+	}
+	.registerButton {
+		background: #464646;
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #888),
+			color-stop(100%, #464646));
+		background: -webkit-linear-gradient(top, #888 0, #464646 100%);
+		background: linear-gradient(to bottom, #888 0, #464646 100%);
+		border: 2px solid #777;
+		width: 95%;
+		margin: 16px auto;
+		display: block;
+		max-width: 960px;
+		-webkit-border-top-left-radius: 6px;
+		-moz-border-radius-topleft: 6px;
+		border-top-left-radius: 6px;
+		-webkit-border-top-right-radius: 6px;
+		-moz-border-radius-topright: 6px;
+		border-top-right-radius: 6px;
+		-webkit-border-bottom-right-radius: 6px;
+		-moz-border-radius-bottomright: 6px;
+		border-bottom-right-radius: 6px;
+		-webkit-border-bottom-left-radius: 6px;
+		-moz-border-radius-bottomleft: 6px;
+	}
+	.registerButton .arrow {
+		border-left: 2px solid #555;
+		-webkit-box-shadow: 2px 0 2px rgba(141, 141, 141, 0.5) inset;
+		box-shadow: 2px 0 2px rgba(141, 141, 141, 0.5) inset;
+	}
+	.termsSection {
+		display: inline-block;
+		padding: 16px 0 0 90px;
+		float: left;
+		margin-bottom: 50px;
+	}
+	.signInWarning {
+		max-width: 800px;
+		display: block;
+		margin: 0 auto;
+		width: 80%;
+		text-align: left;
+		font-size: 26px;
+		padding-left: 74px;
+		padding-bottom: 20px;
+	}
+}

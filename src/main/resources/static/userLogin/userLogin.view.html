@@ -1,0 +1,50 @@
+<div>
+	<div>
+		<div class="signInTitle">SIGN IN</div>
+		<div class="arrow-down"></div>
+	</div>
+	<div class="signInWarning">     
+		<span style="color:red" ng-show="form.username.$dirty && form.username.$invalid">   
+			<span ng-show="form.username.$dirty && form.username.$error.required">
+				&#9862 Email is required
+			</span>
+			<span ng-show="form.username.$error.email">
+				&#9862 Invalid email address
+			</span>
+			<br>
+		</span>	
+		<span style="color:red" ng-show="form.password.$dirty && form.password.$error.required">
+            	&#9862 Password is required
+        </span>
+        <span style="color:red" ng-show="responseObject">
+        <br>
+            	&#9862 {{responseObject.blank}}
+        </span>
+	</div>
+	<form role="form" ng-submit="vm.login()" name="form">
+    	<div class="form" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">    
+            <div class="icon"><span class="glyphicon glyphicon-envelope"></span></div>
+            <input type="email" name="username" id="username" class="formEmail" autofocus="autofocus" ng-model="vm.user.username" required placeholder="Email Address"/> 
+        </div>
+        <div class="form" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+            <div class="icon"><span class="glyphicon glyphicon-lock"></span></div>
+            <input type="password" name="password" id="password" class="formPassword" ng-model="vm.user.password" required placeholder = "Password"/>
+            <a class="forgot" href="https://secure.rakuten.com/AC/MobileForgotPassword.aspx">
+        		Forgot Password?
+        	</a> 
+        </div>
+        <div style="clear: both;"></div>
+        <button type="submit" class="signInButton" type="button" ng-disabled="form.$invalid || vm.dataLoading">
+        	<span class="text">SIGN IN</span>
+            <div class="arrow"><span class="glyphicon glyphicon-chevron-right"></span></div>
+         </button>  
+    	<div class="lineWrapper">
+           <div class="line">&nbsp;</div>
+           <small>or</small>
+         </div>
+        <button class="registerButton" onClick="location.href='#/register'">    
+ 			<span class="text">REGISTER</span>
+ 			<div class="arrow"><span class="glyphicon glyphicon-chevron-right"></span></div>
+         </button>  
+    </form>    
+</div>

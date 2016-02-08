@@ -1,25 +1,29 @@
 <div class="container">
 	<div class="row">
-		<div class="col-md-4 col-lg-4">Type</div>
-		<div class="col-md-4 col-lg-4">
-			<select ng-model="vm.productType.value" ng-change="getBrandNames()" ng-options="productType for productType in productTypes">
-      		</select>
+		<div class="jumbotron">
+  			<h4>Search product</h4>
+  			<p>....</p>
+  			<p><a class="btn btn-default" href="#/searchquery" role="button">Get to know us!</a></p>
 		</div>
-		<div class="col-md-4 col-lg-4"></div>
 	</div>
 	<div class="row">
-		<div class="col-md-4 col-lg-4">Brand</div>
-		<div class="col-md-4 col-lg-4">
-    		<input type="text" ng-model="vm.brandName.value" typeahead-on-select="getModelNames()" uib-typeahead="state for state in states | filter:$viewValue | limitTo:8">
+		<div class="col-md-2 col-lg-2"></div>
+		<label for="productType" class="sr-only">ProductType</label>
+		<div class="col-md-3 col-lg-3">
+			<select id="productType" ng-model="vm.productType.value" class="form-control" ng-change="getBrandNames()" ng-options="productType for productType in productTypes" placeholder="Type">
+				    <option value="">--Product Type--</option>
+      		</select>
+		</div>
+		<label for="brandName" class="sr-only">BrandName</label>
+		<div class="col-md-3 col-lg-3">
+    		<input id="brandName" type="text" ng-model="vm.brandName.value" class="form-control" typeahead-on-select="getModelNames()" uib-typeahead="brandName for brandName in brandNamesResponse | filter:$viewValue | limitTo:8" placeholder="Brand">
     	</div>
-		<div class="col-md-4 col-lg-4"></div>
-	</div>
-	<div class="row">
-		<div class="col-md-4 col-lg-4">Model</div>
-		<div class="col-md-4 col-lg-4">
-			<select ng-model="vm.brandModelSelected.value" ng-options="brandModel for brandModel in brandModels">
+		<label for="modelName" class="sr-only">ProductType</label>
+		<div class="col-md-3 col-lg-3">
+			<select id="modelName" ng-model="vm.brandModelSelected.value" class="form-control" ng-options="modelName for modelName in modelNamesResponse" placeholder="Brand">
+				<option value="">--Model Name--</option>
       		</select>
 		</div>
-		<div class="col-md-4 col-lg-4"></div>
+		<div class="col-md-1 col-lg-1"></div>
 	</div>
 </div>

@@ -1,19 +1,19 @@
 (function() 
 	{
 		angular.module('arrowApp').controller('SearchQueryController',SearchQueryController);
-		SearchQueryController.$inject = ['$stateParams','$scope','QueryService'];
+		SearchQueryController.$inject = ['$scope','QueryService'];
 		
-		function SearchQueryController($stateParams,$scope,QueryService) 
+		function SearchQueryController($scope,QueryService) 
 		{
 			 $scope.productTypes = ['Headphones','Television'];
+			 
 			 $scope.getBrandNames = function() 
 			 {
 				 var productTypeSelected = this.vm.productType.value;
-				 
 				 QueryService.BrandNameSearchQuery(productTypeSelected).then(function(response) 
 				 {
 					 $scope.selected = undefined;
-					 $scope.states = response;
+					 $scope.brandNamesResponse = response;
 				 });
 			 }
 		
@@ -22,9 +22,9 @@
 				 var brandNameSelected = this.vm.brandName.value;
 				 console.log("brandNameSelected :["+brandNameSelected);
 
-				 QueryService.BrandModelSearchQuery(brandNameSelected).then(function(response) 
+				 QueryService.ModelNameSearchQuery(brandNameSelected).then(function(response) 
 				 {
-					 $scope.brandModels = response;
+					 $scope.modelNamesResponse = response;
 					 console.log("BrandModelSearchQuery Service is up and running! "+response);
 				 });
 			 }

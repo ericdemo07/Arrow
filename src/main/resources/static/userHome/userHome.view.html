@@ -1,8 +1,7 @@
 <div class="container-fluid">
 	<div class="row top-head-bar">
 		<div class="col-md-3"></div>
-		<div class="col-md-6">Displaying {{products.length}} results out
-			of 2334</div>
+		<div class="col-md-6">Hi' Ayush! Here are your items</div>
 		<div class="col-md-3"></div>
 	</div>
 	<div class="row bg-light1">
@@ -15,25 +14,15 @@
 						<a ng-click="vm.displayProduct(product)">
 							<div class="col-md-4">Here comes image</div>
 							<div class="col-md-8">
-								<div class="head-name">{{product.productName}}</div>
-								<p>Liked By {{product.rating}} peoples</p>
-								<span>INR Price {{product.price}} Rs.</span>
+								<div class="head-name">Product Name</div>
+								<p>Product Description</p>
+								<span>special anything</span>
 							</div>
 						</a>
 					</div>
 				</li>
 			</ul>
 		</div>
-		<div class="col-md-3">
-			Search: <input ng-model="query"> <select ng-model="orderProp">
-				<option value="price">Low to High</option>
-				<option value="rating">Top</option>
-			</select>
-			<form role="form" ng-submit="vm.display()">
-				<button type="submit" class="signInButton" type="button">
-					<span class="text">Fetch Results</span>
-				</button>
-			</form>
-		</div>
+		<div class="col-md-3"></div>
 	</div>
 </div>

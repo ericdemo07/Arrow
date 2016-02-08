@@ -7,21 +7,21 @@
 		{
 			var service = {};
 			service.BrandNameSearchQuery = BrandNameSearchQuery;
-			service.BrandModelSearchQuery = BrandModelSearchQuery;
+			service.ModelNameSearchQuery = ModelNameSearchQuery;
 
 			return service;
-			function BrandNameSearchQuery(query) 
+			function BrandNameSearchQuery(productType) 
 			{
-				console.log ("Query"+query);
+				console.log ("Query"+productType);
 				var request = $http(
 				{
 					method : "post",
 					url : "/arrow/searchquery",
-					data : query
+					data : productType
 				});
 				return request.then(handleSuccess, handleError('Faliure'));
 			}
-			function BrandModelSearchQuery(brandName) 
+			function ModelNameSearchQuery(brandName) 
 			{
 				console.log ("BrandName : ["+brandName);
 				var request = $http(

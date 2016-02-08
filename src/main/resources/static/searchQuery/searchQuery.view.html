@@ -1,12 +1,12 @@
 <div class="container">
-	<div class="row">
+	<div class="row" style="padding-top:30px;">
 		<div class="jumbotron">
   			<h4>Search product</h4>
   			<p>....</p>
   			<p><a class="btn btn-default" href="#/searchquery" role="button">Get to know us!</a></p>
 		</div>
 	</div>
-	<div class="row">
+	<div class="row" style="padding-top:30px;">
 		<div class="col-md-2 col-lg-2"></div>
 		<label for="productType" class="sr-only">ProductType</label>
 		<div class="col-md-3 col-lg-3">
@@ -18,12 +18,18 @@
 		<div class="col-md-3 col-lg-3">
     		<input id="brandName" type="text" ng-model="vm.brandName.value" class="form-control" typeahead-on-select="getModelNames()" uib-typeahead="brandName for brandName in brandNamesResponse | filter:$viewValue | limitTo:8" placeholder="Brand">
     	</div>
-		<label for="modelName" class="sr-only">ProductType</label>
+		<label for="modelName" class="sr-only">ModelName</label>
 		<div class="col-md-3 col-lg-3">
-			<select id="modelName" ng-model="vm.brandModelSelected.value" class="form-control" ng-options="modelName for modelName in modelNamesResponse" placeholder="Brand">
+			<select id="modelName" ng-model="vm.modelNameSelected.value" class="form-control" ng-change="submitProductDetails()" ng-options="modelName for modelName in modelNamesResponse" placeholder="Model">
 				<option value="">--Model Name--</option>
       		</select>
 		</div>
 		<div class="col-md-1 col-lg-1"></div>
+	</div>
+	<div class="row" style="padding-top:30px;">
+		<div class="col-md-2 col-lg-2"></div>
+		<div class="col-md-3 col-lg-3">
+			<span><sub>Cursor will move to next page on making selection</sub></span>
+		</div>	
 	</div>
 </div>

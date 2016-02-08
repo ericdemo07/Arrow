@@ -16,7 +16,7 @@
 				var request = $http(
 				{
 					method : "post",
-					url : "/arrow/searchquery",
+					url : "/arrow/searchbrand",
 					data : productType
 				});
 				return request.then(handleSuccess, handleError('Faliure'));

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SearchQueryController 
 {
-	@RequestMapping(value = "/arrow/searchquery", method = RequestMethod.POST)
+	@RequestMapping(value = "/arrow/searchbrand", method = RequestMethod.POST)
 	public @ResponseBody Object initialRequest(@RequestBody String query) 
 	{
 		System.out.println("[I am in SearchQueryController]");

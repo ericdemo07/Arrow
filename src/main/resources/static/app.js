@@ -20,7 +20,10 @@
 				url : '/productdetail',
 				controller : 'ProductDetailController',
 				templateUrl : 'productDetail/productDetail.view.html',
-				controllerAs : 'vm'
+				controllerAs : 'vm',
+				params : {
+					'productTypeSelected' : 'some default','brandNameSelected':'some default','modelNameSelected':'some default'
+				}
 			})
 			.state('userHome', 
 			{

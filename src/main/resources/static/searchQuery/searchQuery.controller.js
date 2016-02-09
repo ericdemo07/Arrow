@@ -1,9 +1,9 @@
 (function() 
 	{
 		angular.module('arrowApp').controller('SearchQueryController',SearchQueryController);
-		SearchQueryController.$inject = ['$scope','QueryService','$state'];
+		SearchQueryController.$inject = ['$scope','QueryService','$state','$stateParams'];
 		
-		function SearchQueryController($scope,QueryService,$state) 
+		function SearchQueryController($scope,QueryService,$state,$stateParams) 
 		{
 			 $scope.productTypes = ['Headphones','Television'];
 			 var productTypeSelected;
@@ -38,7 +38,7 @@
 				 console.log("Submit product details "+brandNameSelected);
 				 console.log("Submit product details "+searchQuery);
 				 
-				 $state.go('productDetail', {param1 : productTypeSelected});
+				 $state.go('productDetail', {productTypeSelected:productTypeSelected,brandNameSelected:brandNameSelected,modelNameSelected:modelNameSelected});
 			 }
 		}	
 	}

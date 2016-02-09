@@ -1,7 +1,7 @@
 (function() 
 	{
 		angular.module('arrowApp',
-		['ui.router','ui.bootstrap','ngFileUpload']).config(config);
+		['ui.router','ui.bootstrap','ngFileUpload','naif.base64']).config(config);
 
 		config.$inject = ['$stateProvider','$urlRouterProvider'];
 		
@@ -14,40 +14,35 @@
 				controller : 'SearchQueryController',
 				templateUrl : 'searchQuery/searchQuery.view.html',
 				controllerAs : 'vm'
-			});
-			$stateProvider
+			})
 			.state('productDetail', 
 			{
 				url : '/productdetail',
 				controller : 'ProductDetailController',
 				templateUrl : 'productDetail/productDetail.view.html',
 				controllerAs : 'vm'
-			});
-			$stateProvider
+			})
 			.state('userHome', 
 			{
 				url : '/userhome',
 				controller : '',
 				templateUrl : 'userHome/userHome.view.html',
 				controllerAs : 'vm'
-			});
-			$stateProvider
-			.state('producthome', 
+			})
+			.state('productHome', 
 			{
 				url : '/producthome',
 				controller : '',
 				templateUrl : 'productHome/productHome.view.html',
 				controllerAs : 'vm'
-			});
-			$stateProvider
+			})
 			.state('userLogin', 
 			{
 				url : '/userlogin',
 				controller : '',
 				templateUrl : 'userLogin/userLogin.view.html',
 				controllerAs : 'vm'
-			});
-			$stateProvider
+			})
 			.state('userSignUp', 
 			{
 				url : '/usersignup',

@@ -1,59 +1,68 @@
 <div class="container">
-	<div class="row">
-		<div class="col-md-4 col-lg-4">Product Description</div>
-		<div class="col-md-8 col-lg-8">
-			<textarea rows="4" cols="50"></textarea>
+		<div class="row" style="padding-top:40px;">
+			<div class="col-md-3 col-lg-3"><kbd>Product Description</kbd></div>
+			<div class="col-md-8 col-lg-8">
+				<textarea rows="4" cols="90" placeholder="Describe yourself here..." ng-model="vm.productDescription"></textarea>
+			</div>	
+			<div class="col-md-1 col-lg-1"></div>
+		</div>
+		<div class="row" style="padding-top:50px;">
+			<div class="col-md-3 col-lg-3"><kbd>Upload Photos</kbd></div>
+			<div class="col-md-3 col-lg-3">
+				<div class="image-upload">
+				    <label for="productImage1">
+	        			<img src="http://goo.gl/pB9rpQ"/>
+	    			</label>
+					<input id="productImage1" type="file" ngf-select ng-model="vm.productImage1" accept="image/*" 
+						ngf-max-size="2MB" required ngf-model-invalid="errorFiles" >
+					<br>
+					<img ngf-src="vm.productImage1" class="thumb">
+				</div>	
+			</div>
+			<div class="col-md-3 col-lg-3">
+				<div class="image-upload">
+				    <label for="productImage2">
+	        			<img src="http://goo.gl/pB9rpQ"/>
+	    			</label>
+					<input id="productImage2" type="file" ngf-select ng-model="vm.productImage2" accept="image/*" 
+						ngf-max-size="2MB" required ngf-model-invalid="errorFiles">
+					<br>
+					<img ngf-src="vm.productImage2" class="thumb">
+				</div>	
+			</div>
+			<div class="col-md-3 col-lg-3">
+				<div class="image-upload">
+				    <label for="productImage3">
+	        			<img src="http://goo.gl/pB9rpQ"/>
+	    			</label>
+					<input id="productImage3" type="file"  ngf-select ng-model="vm.productImage3" accept="image/*" 
+						ngf-max-size="2MB" required ngf-model-invalid="errorFiles">
+					<br>
+					<img ngf-src="vm.productImage3" class="thumb">
+				</div>	
+			</div>
+		</div>
+		<div class="row" style="padding-top:50px;">
+			<div class="col-md-3 col-lg-3"><kbd>Upload Product Invoice</kbd></div>
+			<div class="col-md-6 col-lg-6" align="center">
+				<div class="image-upload">
+					<label for="productInvoiceUpload">
+		        		<span class="label label-primary" font size="8">
+		        		Upload Product Invoice</span>
+		    		</label>
+					<input id="productInvoiceUpload" type="file"  ngf-select ng-model="vm.productInvoiceUpload" accept="image/*" 
+						ngf-max-size="2MB" required ngf-model-invalid="errorFiles">
+					--- or --- <a href = "#/productdetail">Manually Input Billing Details</a>		
+				</div>	
+			</div>
+			<div class="col-md-3 col-lg-3"></div>
 		</div>	
-	</div>
-	<div class="row">
-		<div class="col-md-4 col-lg-4">Upload Photos</div>
-		<div class="col-md-2 col-lg-2">
-			<div class="image-upload">
-			    <label for="file-input1">
-        			<img src="http://goo.gl/pB9rpQ"/>
-    			</label>
-				<input id="file-input1" type="file" ngf-select ng-model="productImage1" accept="image/*" 
-					ngf-max-size="2MB" required ngf-model-invalid="errorFiles">
-				<br>
-				<img ngf-src="productImage1" class="thumb">
-			</div>	
-		</div>
-		<div class="col-md-2 col-lg-2">
-			<div class="image-upload">
-			    <label for="file-input2">
-        			<img src="http://goo.gl/pB9rpQ"/>
-    			</label>
-				<input id="file-input2" type="file" ngf-select ng-model="productImage2" accept="image/*" 
-					ngf-max-size="2MB" required ngf-model-invalid="errorFiles">
-				<br>
-				<img ngf-src="productImage2" class="thumb">
-			</div>	
-		</div>
-		<div class="col-md-2 col-lg-2">
-			<div class="image-upload">
-			    <label for="file-input3">
-        			<img src="http://goo.gl/pB9rpQ"/>
-    			</label>
-				<input id="file-input3" type="file"  ngf-select ng-model="productImage3" accept="image/*" 
-					ngf-max-size="2MB" required ngf-model-invalid="errorFiles">
-				<br>
-				<img ngf-src="productImage3" class="thumb">
-			</div>	
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-4 col-lg-4">Product Invoice</div>
-		<div class="col-md-4 col-lg-4">
-			<div class="image-upload">
-				<label for="file-input4">
-	        		<span>
-	        		Upload Product Invoice</span>
-	    		</label>
-				<input id="file-input4" type="file"  ngf-select ng-model="invoiceImage3" accept="image/*" 
-					ngf-max-size="2MB" required ngf-model-invalid="errorFiles">
-				/ <a href = "#">InputDetails</a>		
-			</div>	
-		</div>
-		<div class="col-md-4 col-lg-4"></div>
-	</div>
+		<div class="row" style="padding-top:50px;">
+			<div class="col-md-5 col-lg-5"></div>
+			<div class="col-md-5 col-lg-5">
+				<button ng-click="submitProductDetails()" class="btn btn-default btn-lg">S.U.B.M.I.T</button>
+			</div>
+			</div> 
+			<div class="col-md-2 col-lg-2"></div>
 </div>
+	

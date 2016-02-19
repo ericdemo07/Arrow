@@ -35,6 +35,10 @@ configurations {
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('org.springframework.boot:spring-boot-starter-ws')
+	compile 'net.sourceforge.tess4j:tess4j:3.0.0'
+	compile 'org.apache.pdfbox:pdfbox:2.0.0-RC3'
+	compile 'com.datastax.cassandra:cassandra-driver-core:3.0.0'	
+	compile 'org.apache.tika:tika-core:1.11'
 	providedRuntime('org.springframework.boot:spring-boot-starter')
 	testCompile('org.springframework.boot:spring-boot-starter-test') 
 }

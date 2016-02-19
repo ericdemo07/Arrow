@@ -5,7 +5,7 @@ import com.datastax.driver.core.ResultSet;
 import com.datastax.driver.core.Row;
 import com.datastax.driver.core.Session;
 
-public class ConnectingToCassandra 
+public class ConnectingToCassandra  
 {
 	/*public static void main(String...args)
 	{

@@ -4,13 +4,15 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
-
+import com.constants.RegexPattern;
 import net.sourceforge.tess4j.Tesseract;
 import net.sourceforge.tess4j.TesseractException;
 
@@ -32,6 +34,20 @@ public class ProductDetailUploadController
 			invoiceFile.transferTo(invoiceFileAsFile);
 			System.out.println(invoiceFileAsFile.exists());
 			invoiceDataExtracted = instance.doOCR(invoiceFileAsFile);
+			System.out.println("invoiceDataExtracted : [ "+invoiceDataExtracted);
+			
+			//using regex to parse data
+		    String patternForCommerceName = RegexPattern.COMMERCE_NAME;
+		    Pattern p = Pattern.compile(patternForCommerceName);
+		    Matcher m = p.matcher(invoiceDataExtracted);
+		    if (m.find( )) 
+		    {
+		    	System.out.println("CommerceName : "+m.group(2));
+		    }
+		    else
+		    {
+		         System.out.println("NO Commerce Name MATCH");
+		    }
 		}
 		catch (IllegalStateException|IOException|TesseractException e) 
 		{

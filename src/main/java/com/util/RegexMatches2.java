@@ -9,7 +9,7 @@ public class RegexMatches2
     private static final String INPUT =
                                     "cat cat cat cattie cat";
 
-    public static void main( String args[] )
+   /* public static void main( String args[] )
     {
        Pattern p = Pattern.compile(REGEX);
        Matcher m = p.matcher(INPUT); // get a matcher object
@@ -22,5 +22,5 @@ public class RegexMatches2
          System.out.println("start(): "+m.start());
          System.out.println("end(): "+m.end());
       }
-   }
+   }*/
 }

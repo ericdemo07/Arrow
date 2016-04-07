@@ -28,7 +28,7 @@
 			.state('userHome', 
 			{
 				url : '/userhome',
-				controller : '',
+				controller : 'UserHomeController',
 				templateUrl : 'userHome/userHome.view.html',
 				controllerAs : 'vm'
 			})

@@ -48,6 +48,18 @@ public class ProductDetailUploadController
 		    {
 		         System.out.println("NO Commerce Name MATCH");
 		    }
+		    String patternSupplierName = RegexPattern.SUPPLIER_NAME;
+		    
+		    Pattern p1 = Pattern.compile(patternSupplierName);
+		    Matcher m1 = p1.matcher(invoiceDataExtracted);
+		    if (m1.find( )) 
+		    {
+		    	System.out.println("SupplierName : "+m1.group(2));
+		    }
+		    else
+		    {
+		         System.out.println("NO Supplier Name MATCH");
+		    }
 		}
 		catch (IllegalStateException|IOException|TesseractException e) 
 		{

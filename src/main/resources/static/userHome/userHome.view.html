@@ -1,24 +1,19 @@
 <div class="container-fluid">
 	<div class="row top-head-bar">
-		<div class="col-md-3"></div>
-		<div class="col-md-6">Hi' Ayush! Here are your items</div>
+		<div class="col-md-3">Hi' Ayush!</div>
+		<div class="col-md-6">Here are your items</div>
 		<div class="col-md-3"></div>
 	</div>
 	<div class="row bg-light1">
 		<div class="col-md-3"></div>
 		<div class="col-md-6">
 			<ul class="list-unstyled">
-				<li class="result-video-shortcuts list-group-item"
-					ng-repeat="product in products | filter:query | orderBy:orderProp">
+				<li class="result-video-shortcuts list-group-item" ng-repeat="product in products">
 					<div class="row">
-						<a ng-click="vm.displayProduct(product)">
-							<div class="col-md-4">Here comes image</div>
-							<div class="col-md-8">
-								<div class="head-name">Product Name</div>
-								<p>Product Description</p>
-								<span>special anything</span>
-							</div>
-						</a>
+						<div class="col-md-4">Here comes image</div>
+						<div class="col-md-8">
+							<span>special anything</span>
+						</div>
 					</div>
 				</li>
 			</ul>

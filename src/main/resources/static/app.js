@@ -7,6 +7,8 @@
 		
 		function config($stateProvider,$urlRouterProvider) 
 		{
+			$urlRouterProvider.otherwise("/searchquery");
+
 			$stateProvider
 			.state('searchQuery', 
 			{

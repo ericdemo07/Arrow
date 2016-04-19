@@ -10,6 +10,8 @@
 				 var productTypeSelected = $stateParams.productTypeSelected;
 				 var brandNameSelected = $stateParams.brandNameSelected;
 				 var modelNameSelected = $stateParams.modelNameSelected;
+				 console.log("ProductDetails : "+productTypeSelected+" "+brandNameSelected+" "+modelNameSelected);
+
 				 var temp = this.vm;
 				 var productDetails = {productDescription:temp.productDescription,imageUpload1:temp.productImage1,
 						 imageUpload2:temp.productImage2,imageUpload3:temp.productImage1,invoiceDetails:""};

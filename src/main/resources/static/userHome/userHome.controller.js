@@ -4,7 +4,7 @@
 	
 	function UserHomeController($scope, QueryService, $state, $stateParams) 
 	{
-		$scope.products = [ 'Headphones', 'Television', 'Refrigrator' ];
+		$scope.products = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P'];
 		var productTypeSelected;
 		var brandNameSelected;
 		var modelNameSelected;

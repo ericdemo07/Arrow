@@ -37,31 +37,10 @@
 			{
 				console.log("Output   :"+invoiceFileType);
 				var request = Upload.upload({
-			        url: '/arrow/productdetailupload',
+			        url: '/arrow/productdetailinvoiceupload',
 			        fields: {'username': 'zouroto'}, // additional data to send
 			        file: invoiceFileType
 			    }).then(handleSuccess, handleError('Faliure'));
-				/*var request = Upload.upload({
-		            url: '/arrow/productdetailupload',
-		            headers : {
-		                'Content-Type': invoiceFileType.type
-		              },
-		              data: invoiceFileType
-		        }).then(handleSuccess, handleError('Faliure'));*/
-				/*console.log ("BrandName : ["+invoiceFileType.$ngfBlobUrl);
-				var request = $http(
-				{
-					method : "post",
-					url : "/arrow/productdetailupload",
-					 headers: {
-						   'Content-Type': 'multipart/form-data',
-				'boundary'='----WebKitFormBoundary7uIEu9ax8IY8nCde'
-						 },
-					data: {file: invoiceFileType, 'username': 'ayush'},
-					transformRequest: function(data, headersGetterFunction) {
-				        return data; // do nothing! FormData is very good!
-				    }
-				});*/
 				return request.then(handleSuccess, handleError('Faliure'));
 			}
 			function handleSuccess(data) 

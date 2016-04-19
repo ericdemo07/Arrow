@@ -37,7 +37,7 @@
 
 			console.log("Submit product details " + productTypeSelected);
 			console.log("Submit product details " + brandNameSelected);
-			console.log("Submit product details " + searchQuery);
+			console.log("Submit product details " + modelNameSelected);
 
 			$state.go('productDetail', {
 				productTypeSelected : productTypeSelected,

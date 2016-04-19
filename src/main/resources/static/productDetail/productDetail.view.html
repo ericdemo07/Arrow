@@ -2,7 +2,7 @@
 	<div class="row" style="padding-top:40px;">
 		<div class="col-md-3 col-lg-3"><kbd>Product Description</kbd></div>
 		<div class="col-md-8 col-lg-8">
-			<textarea rows="4" cols="90" placeholder="Describe yourself here..." ng-model="vm.productDescription"></textarea>
+			<textarea rows="4" cols="90" placeholder="Describe here..." ng-model="vm.productDescription"></textarea>
 		</div>	
 		<div class="col-md-1 col-lg-1"></div>
 	</div>
@@ -14,7 +14,7 @@
         			<img src="http://goo.gl/pB9rpQ"/>
     			</label>
 				<input id="productImage1" type="file" ngf-select ng-model="vm.productImage1" accept="image/*" 
-					ngf-max-size="2MB" required ngf-model-invalid="errorFiles" >
+					ngf-max-size="2MB" required ngf-model-invalid="errorFiles" ngf-multiple="false">
 				<br>
 				<img ngf-src="vm.productImage1" class="thumb">
 			</div>	

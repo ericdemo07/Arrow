@@ -14,7 +14,7 @@
         			<img src="http://goo.gl/pB9rpQ"/>
     			</label>
 				<input id="productImage1" type="file" ngf-select ng-model="vm.productImage1" accept="image/*" 
-					ngf-max-size="2MB" required ngf-model-invalid="errorFiles" ngf-multiple="false">
+					ngf-max-size="2MB" required ngf-model-invalid="errorFiles" ngf-multiple="false" ng-Change="uploadProductImage1()">
 				<br>
 				<img ngf-src="vm.productImage1" class="thumb">
 			</div>	
@@ -25,7 +25,7 @@
         			<img src="http://goo.gl/pB9rpQ"/>
     			</label>
 				<input id="productImage2" type="file" ngf-select ng-model="vm.productImage2" accept="image/*" 
-					ngf-max-size="2MB" required ngf-model-invalid="errorFiles">
+					ngf-max-size="2MB" required ngf-model-invalid="errorFiles" ng-Change="uploadProductImage2()">
 				<br>
 				<img ngf-src="vm.productImage2" class="thumb">
 			</div>	
@@ -36,7 +36,7 @@
         			<img src="http://goo.gl/pB9rpQ"/>
     			</label>
 				<input id="productImage3" type="file"  ngf-select ng-model="vm.productImage3" accept="image/*" 
-					ngf-max-size="2MB" required ngf-model-invalid="errorFiles">
+					ngf-max-size="2MB" required ngf-model-invalid="errorFiles" ng-Change="uploadProductImage3()">
 				<br>
 				<img ngf-src="vm.productImage3" class="thumb">
 			</div>	
@@ -47,11 +47,11 @@
 		<div class="col-md-6 col-lg-6" align="center">
 			<div class="image-upload">
 				<label for="productInvoiceUpload">
-	        		<span class="label label-primary" font size="8">
+	        		<span class="label label-primary" font size="10">
 	        		Upload Product Invoice</span>
 	    		</label>
 				<input id="productInvoiceUpload" type="file"  ngf-select ng-model="vm.productInvoiceUpload" accept="image/*,.pdf" 
-					ngf-max-size="2MB" required ngf-model-invalid="errorFiles">
+					ngf-max-size="2MB" required ngf-model-invalid="errorFiles" ng-Change="uploadProductInvoice()">
 				--- or --- <a href = "#/productdetail">Manually Input Billing Details</a>	
 				<br>
 				<img ngf-src="vm.productInvoiceUpload" class="thumb">	

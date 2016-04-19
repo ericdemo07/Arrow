@@ -8,19 +8,19 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.multipart.MultipartFile;
 import com.constants.RegexPattern;
-import com.pojo.ProductDetails;
+import com.pojo.ProductInvoice;
 import net.sourceforge.tess4j.Tesseract;
 import net.sourceforge.tess4j.TesseractException;
 
 public class TesseractImageDisect {
 	final static Logger log = LoggerFactory.getLogger(TesseractImageDisect.class);
 
-	public ProductDetails invoiceDissect(MultipartFile invoiceFile)
+	public ProductInvoice invoiceDissect(MultipartFile invoiceFile)
 			throws IllegalStateException, IOException, TesseractException {
 		File invoiceFileAsFile = new File("C:/E_Drive/Arrow/UploadedFiles/invoice.pdf");
 		String invoiceExtractedData = null;
 		Tesseract tesseractInstance = new Tesseract();
-		ProductDetails productDetails = new ProductDetails();
+		ProductInvoice productDetails = new ProductInvoice();
 
 		invoiceFile.transferTo(invoiceFileAsFile);
 		log.info("\tFile Exists : [" + invoiceFileAsFile.exists());

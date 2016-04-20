@@ -4,9 +4,9 @@
 	</div>
 	<div class="row">
 		<form class="form-signin"> 
-			<input type="text" name="userId" id="userId" placeholder="UserId">
-			<input type="text" name="password" id="password" placeholder="Password">
-			<button onClick="">    
+			<input type="text" name="userId" id="userId" placeholder="UserId" ng-model="vm.userId">
+			<input type="text" name="password" id="password" placeholder="Password" ng-model="vm.password">
+			<button ng-click="userLogin()">    
 		 		<span class="text">LOGIN</span>
 			</button>
 		  	<button onClick="location.href='#/usersignup'">    

@@ -44,7 +44,7 @@
 			.state('userLogin', 
 			{
 				url : '/userlogin',
-				controller : '',
+				controller : 'UserLoginController',
 				templateUrl : 'userLogin/userLogin.view.html',
 				controllerAs : 'vm'
 			})

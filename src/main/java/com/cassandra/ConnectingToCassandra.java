@@ -27,7 +27,7 @@ public class ConnectingToCassandra {
 		log.info("\tinserting values to arrowkeyspace.arrowinserttest1");
 		StringBuilder builder = new StringBuilder();
 		builder.append("INSERT INTO arrowinserttest2  (name, nam1) VALUES ('174p1',");
-		builder.append(convFile);
+		builder.append(productimage2);
 		builder.append(")");
 		session.execute(builder.toString());
 

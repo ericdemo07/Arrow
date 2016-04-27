@@ -61,25 +61,15 @@ public class ProductDetailUploadController {
 		// TODO: to be removed
 		List<String> brandName = new ArrayList<String>();
 		log.info("\tContent Type : [" + invoiceFile.getContentType());
-		ProductInvoice productDetails = new ProductInvoice();
+		ProductInvoice productInvoice = new ProductInvoice();
 		TesseractImageDisect tesseractImageDissect = new TesseractImageDisect();
 		try {
-			productDetails = tesseractImageDissect.invoiceDissect(invoiceFile);
+			productInvoice = tesseractImageDissect.invoiceDissect(invoiceFile);
 		} catch (IllegalStateException | IOException | TesseractException e) {
 			e.printStackTrace();
 		}
 
 		// TODO: here comes cassandra
-		ConnectingToCassandra connectingToCassandra = new ConnectingToCassandra();
-		try {
-			connectingToCassandra.insertProductDetails(productDetails, invoiceFile);
-		} catch (IllegalStateException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 
 		return brandName.toArray();
 	}
@@ -92,6 +82,16 @@ public class ProductDetailUploadController {
 		productDetails.setBrandName(productTextDetails.getBrandName());
 		productDetails.setModelName(productTextDetails.getModelName());
 
+		ConnectingToCassandra connectingToCassandra = new ConnectingToCassandra();
+		try {
+			connectingToCassandra.insertProductDetails(productDetails);
+		} catch (IllegalStateException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		log.info("\tProductImage3Uploaded : [" + productDetails.toString());
 		return brandName.toArray();
 	}

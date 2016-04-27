@@ -14,15 +14,14 @@ import org.springframework.web.bind.annotation.RestController;
 import com.pojo.LoginData;
 
 @RestController
-public class LoginController 
-{
+public class LoginController {
 	final static Logger log = LoggerFactory.getLogger(LoginController.class);
+
 	@RequestMapping(value = "/arrow/login", method = RequestMethod.POST)
-	public @ResponseBody Object login(@RequestBody LoginData loginData) 
-	{
+	public @ResponseBody Object login(@RequestBody LoginData loginData) {
 		List<String> brandName = new ArrayList<String>();
-		log.info("\tProductImage1Uploaded"+loginData.toString());
-		System.out.println(loginData.getPassword()+"  "+loginData.getUserId());
+		log.info("\tProductImage1Uploaded" + loginData.toString());
+		System.out.println(loginData.getPassword() + "  " + loginData.getUserId());
 		return brandName.toArray();
 	}
 }

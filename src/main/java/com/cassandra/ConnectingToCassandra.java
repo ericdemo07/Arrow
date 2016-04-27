@@ -1,30 +1,54 @@
 package com.cassandra;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.datastax.driver.core.Cluster;
 import com.datastax.driver.core.ResultSet;
+import com.datastax.driver.core.Row;
 import com.datastax.driver.core.Session;
 import com.pojo.ProductDetails;
 
 public class ConnectingToCassandra {
 	final static Logger log = LoggerFactory.getLogger(ConnectingToCassandra.class);
+	Cluster cluster;
 
-	public void insertProductDetails(ProductDetails productDetails) throws IllegalStateException, IOException {
-		// MultipartFile productimage2 = null;
-		// File convFile = new File( productimage1.getOriginalFilename());
-		// productimage1.transferTo(convFile);
-
-		Cluster cluster;
-		Session session;
-		// log.info(productDetails.getProductType());
-		// log.info(productDetails.getVendor());
+	public Session getSession() {
+		Session session = null;
 		cluster = Cluster.builder().addContactPoint("127.0.0.1").build();
 		session = cluster.connect("arrowkeyspace");
+		return session;
+	}
+	
+	public List<ProductDetails> getUserHomeData()
+	{
+		Session session = getSession();
+		String getProductListByUserIdQuery = "SELECT product_type, brand_name, model_name, product_desc, update_date FROM arrowproducts WHERE user_id = 'ayush' ALLOW FILTERING";
+		log.info("\tgetting productListByUserId from arrowkeyspace.arrowproducts");
+		ResultSet getProductListByUserId = session.execute(getProductListByUserIdQuery);
+		//System.out.println(getProductListByUserId.all());
+		//System.out.println(getProductListByUserId.getColumnDefinitions().asList().size());
+		List<ProductDetails> productDetailList = new ArrayList<>();
+		for(Row row : getProductListByUserId.all())
+		{
+			ProductDetails productDetails = new ProductDetails();
+			productDetails.setProductType(row.getString("product_type"));
+			productDetails.setBrandName(row.getString("brand_name"));
+			productDetails.setModelName(row.getString("model_name"));
+			productDetails.setProductDescription(row.getString("product_desc"));
+			
+			productDetailList.add(productDetails);
+		}
+		return productDetailList;
+	}
 
+	public void insertProductDetails(ProductDetails productDetails) throws IllegalStateException, IOException {
+		Session session = getSession();
 		String getMaxserialNoQuery = "SELECT MAX(serial_no) FROM arrowproducts";
 		log.info("\tgetting maxSerialNo from arrowkeyspace.arrowproducts");
 		ResultSet getMaxserialNo = session.execute(getMaxserialNoQuery);
@@ -59,7 +83,7 @@ public class ConnectingToCassandra {
 		insertStringBuilder.append("','");
 		insertStringBuilder.append("ayush')");
 		System.out.println(insertStringBuilder.toString());
-		session.execute(insertStringBuilder.toString());
+		//session.execute(insertStringBuilder.toString());
 
 		/*
 		 * ResultSet results = session.execute("SELECT * FROM arrowinserttest1"

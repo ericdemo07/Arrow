@@ -14,5 +14,13 @@
 				function(response, $stateProvider, $urlRouterProvider) {
 					$scope.products = response;
 				});
+		
+		$scope.getProductDetail = function()
+		 {
+			var temp = this.vm;
+			console.log("hello hello 22");
+			$state.go('productHome', {a:"a"
+			});
+		 }
 	}
 })();

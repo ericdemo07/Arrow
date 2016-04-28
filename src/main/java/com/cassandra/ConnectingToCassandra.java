@@ -31,8 +31,6 @@ public class ConnectingToCassandra {
 		String getProductListByUserIdQuery = "SELECT product_type, brand_name, model_name, product_desc, update_date FROM arrowproducts WHERE user_id = 'ayush' ALLOW FILTERING";
 		log.info("\tgetting productListByUserId from arrowkeyspace.arrowproducts");
 		ResultSet getProductListByUserId = session.execute(getProductListByUserIdQuery);
-		//System.out.println(getProductListByUserId.all());
-		//System.out.println(getProductListByUserId.getColumnDefinitions().asList().size());
 		List<ProductDetails> productDetailList = new ArrayList<>();
 		for(Row row : getProductListByUserId.all())
 		{
@@ -41,7 +39,6 @@ public class ConnectingToCassandra {
 			productDetails.setBrandName(row.getString("brand_name"));
 			productDetails.setModelName(row.getString("model_name"));
 			productDetails.setProductDescription(row.getString("product_desc"));
-			
 			productDetailList.add(productDetails);
 		}
 		return productDetailList;
@@ -82,8 +79,7 @@ public class ConnectingToCassandra {
 		insertStringBuilder.append(createDate);
 		insertStringBuilder.append("','");
 		insertStringBuilder.append("ayush')");
-		System.out.println(insertStringBuilder.toString());
-		//session.execute(insertStringBuilder.toString());
+		session.execute(insertStringBuilder.toString());
 
 		/*
 		 * ResultSet results = session.execute("SELECT * FROM arrowinserttest1"
